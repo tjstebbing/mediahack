@@ -1,0 +1,68 @@
+<!doctype HTML>
+<html lang='en'>
+    <head>
+        <script src='mediahack-poly.min.js'></script>
+        <style>
+            body { font-family: sans-serif; background: white; }
+            div { padding: 5px; }
+            i { color: #ccc;}
+        </style>
+    </head>
+    <body>
+
+        <!-- Default tests -->
+        <h3>Default Tests</h3>
+
+        <script>
+            mediahack(document.body);
+        </script>
+
+        <style>
+            body.landscape .m1 i { color: black; }
+            body.portrait .m2 i { color: black; }
+            body.small .m3 i { color: black; }
+            body.medium .m4 i { color: black; }
+            body.large .m5 i { color: black; }
+        </style>
+
+        <div class='m1'><i>&#10004;</i> Landscape</div>
+        <div class='m2'><i>&#10004;</i> Portrait</div>
+        <div class='m3'><i>&#10004;</i> Small (0 - 768px)</div>
+        <div class='m4'><i>&#10004;</i> Medium (769 - 991px)</div>
+        <div class='m5'><i>&#10004;</i> Large (992px - *)</div>
+
+
+        <!-- Testing custom queries -->
+        <h3>Custom Query Tests</h3>
+
+        <div id='custom'>
+            <script>
+                mediahack(document.body, {
+                    print : 'print',
+                    tv : 'tv',
+                    retina : 'screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-resolution: 120dpi)',
+                    ipad4 : ' screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)',
+                    ipad5 : 'screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'   
+                    
+                });
+            </script>
+
+            <style>
+                .print .c1 i { color: black; }
+                .tv .c2 i { color: black; }
+                .retina .c3 i { color: black; }
+                .ipad4 .c4 i { color: black; }
+                .ipad5 .c5 i { color: black; }
+            </style>
+
+            <div class='c1'><i>&#10004;</i> Print media</div>
+            <div class='c2'><i>&#10004;</i> Watching form a TV</div>
+            <div class='c3'><i>&#10004;</i> Using a retina display</div>
+            <div class='c4'><i>&#10004;</i> On an iPad 4</div>
+            <div class='c5'><i>&#10004;</i> On an iPad 5</div>
+        </div>
+
+
+
+    </body>
+</html>
