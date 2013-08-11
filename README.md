@@ -13,7 +13,7 @@ without long-hand media queries all through your css.
 
 [Check out the demo](http://pomke.github.io/mediahack/)
 
-Mediahack is only 0.8kb [at it's thinnest point](http://en.wikipedia.org/wiki/MacBook_Air)!
+Mediahack is only 0.8kb at it's thinnest point[*](http://en.wikipedia.org/wiki/MacBook_Air)
 
 
 Usage
