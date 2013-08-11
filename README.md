@@ -11,6 +11,8 @@ is in portrait.
 This makes it easy to write css selectors for these options
 without long-hand media queries all through your css.
 
+Mediahack is only 0.8kb [at it's thinnest point](http://en.wikipedia.org/wiki/MacBook_Air)!
+
 Usage
 -----
 
